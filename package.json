@@ -5,6 +5,7 @@
   "main": "dist/vgrid.js",
   "scripts": {
     "build": "webpack --config ./.webpack/webpack.config.js --mode production",
+    "build:type": "tsc --noEmit",
     "serve": "webpack serve --config ./.webpack/webpack.dev.js"
   },
   "keywords": [

@@ -3,9 +3,12 @@
     "outDir": "./dist/",
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
-    "declaration": false,
+    "declaration": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
@@ -15,8 +18,11 @@
     "strictNullChecks": false,
     "importHelpers": true,
     "isolatedModules": true,
+    "skipLibCheck": true,
     "paths": {
-      "@revolist/vue-datagrid": ["src/vgrid"]
+      "@revolist/vue-datagrid": [
+        "src/vgrid"
+      ]
     }
   },
   "include": [
