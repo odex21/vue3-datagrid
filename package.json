@@ -1,12 +1,15 @@
 {
-  "name": "@revolist/vue3-datagrid",
-  "version": "3.0.52",
+  "name": "@07future/vue3-datagrid",
+  "version": "0.0.7-fix.3",
   "description": "Vue 3 data grid spreadsheet",
-  "main": "dist/vgrid.js",
+  "main": "dist/vue3-datagrid.cjs.js",
+  "module": "dist/vue3-datagrid.es.js",
+  "typings": "dist/vgrid.d.ts",
   "scripts": {
-    "build": "webpack --config ./.webpack/webpack.config.js --mode production",
-    "build:type": "tsc --noEmit",
-    "serve": "webpack serve --config ./.webpack/webpack.dev.js"
+    "build": "vite build",
+    "build:type": "tsc --declaration --emitDeclarationOnly",
+    "dev": "vite",
+    "prepublish": "yarn build && yarn build:type"
   },
   "keywords": [
     "spreadsheet",
@@ -32,8 +35,14 @@
     "url": "https://github.com/revolist/vue3-datagrid/issues"
   },
   "homepage": "https://github.com/revolist/vue3-datagrid#readme",
+  "publishConfig": {
+    "registry": "https://gitlab.07future.com/api/v4/projects/41/packages/npm/"
+  },
   "license": "MIT",
   "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vitejs/plugin-vue-jsx": "^1.1.3",
+    "@vue/babel-plugin-jsx": "^1.0.5",
     "@vue/compiler-sfc": "^3.0.5",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
@@ -44,6 +53,7 @@
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.6",
     "typescript": "^4.0.3",
+    "vite": "^2.1.5",
     "vue": "^3.0.5",
     "vue-loader": "^16.1.2",
     "vue-style-loader": "^4.1.2",
@@ -53,6 +63,7 @@
   },
   "dependencies": {
     "@revolist/revogrid": "^3.0.52",
-    "@stencil/core": "^2.4.0"
+    "@stencil/core": "^2.4.0",
+    "@vueuse/core": "^4.8.2"
   }
 }
