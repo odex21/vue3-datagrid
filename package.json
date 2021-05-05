@@ -1,6 +1,6 @@
 {
   "name": "@07future/vue3-datagrid",
-  "version": "0.0.7-fix.3",
+  "version": "0.0.8-fix.1",
   "description": "Vue 3 data grid spreadsheet",
   "main": "dist/vue3-datagrid.cjs.js",
   "module": "dist/vue3-datagrid.es.js",
